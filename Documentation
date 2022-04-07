@@ -1,0 +1,49 @@
+Library Management Project:-
+----------------------------
+Using django 3.1.1 version,python 3.7.4 version and rest_framework integration.
+database- mysql
+
+This project contains the hole information about the Book(model). In Library Management Project here we can create,
+update,retrieve,delete (complete curd operation) using django function based view.we use one application file which is
+Library_Management_App.
+
+So every project follows some architecture,in this django project we use MVT architecture
+M-Model
+V-View
+T-Templates
+
+In this Project have Book Model that contains some fields like Book name,author,price,pages,publish date,
+for our database purpose to store about the information of Book Model.
+
+In this project we use user defined forms which is derived from form.ModelForm class.by using this forms.py file
+user can give input to create and update data of a Book record.
+
+In views.py file we use function based view for our business codding purpose.
+this python file contains some modules like authenticate ,login, logout for security purpose.
+that means only registered user can access the project.for that we have a registered page where user can register as admin.
+And accessing the data of Book model.
+In this Project superuser can do every modifications
+             Admin:-username-Thanos
+                    email-thanos@gmail.com
+                    password-python3.7
+             By giving This credentials user can access the data.
+In this project we have an admin site which is provided by django Administrations
+in that we a user defined admin i.e Book_Admin,By using admin site we give data to the databases.
+
+And we use DTL(Django Template language) for our presentation part.
+we use so many templates files.In templates file we use tags and filters and the template inheritance concepts.
+
+And we have some api Integrations part into in our project.
+using of serializers module user can give data to our models.which is present in the django rest framework 3rd patry applications.
+we have user defined serializer class i.e BookSerializer provides an interface where we can give data for our Book Model.
+in Drf there are two types of views:-
+    -APIView
+    -Viewsets
+In this project we have done curd operation using Viewsets view.
+This classbase view is very useful for simple project like curd operations.
+In this view we have queryset object which contains all information of Book Model in form json.
+we use routers concepts in this class base view.
+    router=routers.DefaultRouter()
+
+
+

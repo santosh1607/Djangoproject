@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style>
+    .container{
+        background-color: lightgreen;
+        height: 600px;
+        color: white;
+    }
+    body{
+    background-color:lightblue;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-5">
+<form method="POST">
+    {% csrf_token %}
+    <h2 class="text-center bg-info text-white">Login Page</h2>
+    <lable>Username:</lable>
+    <input type="text" name="username" placeholder=" Enter Username" class="form-control">
+
+    <lable>Email:</lable>
+    <input type="text" name="email" placeholder=" Enter Email" class="form-control">
+
+    <lable>Password:</lable>
+    <input type="password" name="password" placeholder="Enter Password" class="form-control">
+    <br>
+    <center>
+    <input type="submit" value="Login" class="btn btn-primary">
+    <input type="reset" value="Clear" class="btn btn-secondary">
+    </center>
+    <br>
+    <h4>Create New Account: <button><a class="btn btn-success" href="{% url 'register' %}">SingUp</a></button></h4>
+</form>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
